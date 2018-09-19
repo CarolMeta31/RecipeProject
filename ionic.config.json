@@ -1,0 +1,7 @@
+{
+  "name": "recipeProject",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
