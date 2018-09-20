@@ -1,3 +1,10 @@
+import { SuggestionPage } from './../pages/suggestion/suggestion';
+import { LogoutPage } from './../pages/logout/logout';
+import { ProfilePage } from './../pages/profile/profile';
+import { FavouritePage } from './../pages/favourite/favourite';
+import { CommunityPage } from './../pages/community/community';
+import { OtherPage } from './../pages/other/other';
+import { TabsPage } from './../pages/tabs/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -11,7 +18,14 @@ import { AuthProvider } from '../providers/auth/auth';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,TabsPage,
+    OtherPage,
+    CommunityPage,
+    SuggestionPage,
+    FavouritePage,
+    ProfilePage,
+    LogoutPage
+
   ],
   imports: [
     BrowserModule,
@@ -20,7 +34,14 @@ import { AuthProvider } from '../providers/auth/auth';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    TabsPage,
+    OtherPage,
+    CommunityPage,
+    SuggestionPage,
+    FavouritePage,
+    ProfilePage,
+    LogoutPage
   ],
   providers: [
     StatusBar,
