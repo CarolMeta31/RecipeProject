@@ -25,9 +25,14 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
     this.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
   }
-
+//navigation to the home page
+anonLogin(){
+  this.authPro.anonLogin();
+  this.navCtrl.push(HomePage)
+}
 //Delegate request to auth provider
 smsLogin(phoneNum: number){
   this.authPro.smsLogin(phoneNum,this.recaptchaVerifier);
+ // this.navCtrl.push(HomePage)
 }
 }

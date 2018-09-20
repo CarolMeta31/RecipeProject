@@ -27,7 +27,7 @@ var config = {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any ='LoginPage' ;
+  rootPage :any ;
 
   pages: Array<{title: string, component: any}>;
 

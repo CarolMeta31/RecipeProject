@@ -15,7 +15,15 @@ export class AuthProvider {
     console.log('Hello AuthProvider Provider');
   }
 
- 
+  //login as a guest not a registered app user
+  anonLogin(): Promise<any> {
+
+    return firebase.auth().signInAnonymously()
+      .then(response => {
+        console.log(response);
+      })
+  }
+
 
     smsLogin(phoneNumber: number, recaptchaVerifier: firebase.auth.RecaptchaVerifier) {
       const appVerifier = recaptchaVerifier;
