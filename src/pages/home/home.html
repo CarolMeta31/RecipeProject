@@ -1,14 +1,34 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      foodRecipe APP
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-searchbar [(ngModel)]="item" debounce=2000 (input)="getItem($event)" placeholder="Whats in your fridge"></ion-searchbar>
+    
+
+<ion-list no-lines>
+          <ion-list>
+            <ion-item >
+              <ion-item >
+                 
+     
+                    <p> {{mylabel}}</p><br>
+                  <img src="{{image}}" alt="">
+         
+          
+             
+              </ion-item>
+              <h2>{{mysource}}</h2>
+              <p> {{ingredientLines}}</p>
+            </ion-item>
+          </ion-list>
+        </ion-list>
+
+
+
 </ion-content>
+
