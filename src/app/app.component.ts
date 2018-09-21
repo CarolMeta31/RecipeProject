@@ -1,3 +1,4 @@
+import { OnboardingPage } from './../pages/onboarding/onboarding';
 import { LogoutPage } from './../pages/logout/logout';
 import { FavouritePage } from './../pages/favourite/favourite';
 import { OtherPage } from './../pages/other/other';
@@ -49,11 +50,11 @@ export class MyApp {
 
     const unsubscribe =firebase.auth().onAuthStateChanged(user=>{
       if (!user){
-        this.rootPage=HomePage;
+        this.rootPage='OnboardingPage';
         unsubscribe();
       }
       else{
-        this.rootPage='LoginPage';
+        this.rootPage= OnboardingPage;
         unsubscribe();
       }
     })
